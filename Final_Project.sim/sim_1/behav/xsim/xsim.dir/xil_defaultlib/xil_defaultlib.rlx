@@ -1,0 +1,8 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:57
+D:/Programming/CSED273/Final_Project/Final_Project.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,,,,,,,
+D:/Programming/CSED273/Final_Project/code/mux.tb.v,1749193434,verilog,,,,tb_mux4x8to4_c,,,,,,,,
+D:/Programming/CSED273/Final_Project/code/mux.v,1749194281,verilog,,D:/Programming/CSED273/Final_Project/code/mux.tb.v,,mux2to1;mux3x2to3_c;mux4to1;mux4x2to4_c;mux4x8to4;mux4x8to4_c;mux8to1,,,,,,,,
+D:/Programming/CSED273/Final_Project/code/segment.v,1749109970,verilog,,,,bcd_to_7seg;led_renderer,,,,,,,,

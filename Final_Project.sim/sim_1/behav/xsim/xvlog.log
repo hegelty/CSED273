@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/CSED273/Final_Project/code/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2to1
+INFO: [VRFC 10-311] analyzing module mux4to1
+INFO: [VRFC 10-311] analyzing module mux8to1
+INFO: [VRFC 10-311] analyzing module mux4x8to4
+INFO: [VRFC 10-311] analyzing module mux4x8to4_c
+INFO: [VRFC 10-311] analyzing module mux4x2to4_c
+INFO: [VRFC 10-311] analyzing module mux3x2to3_c
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/CSED273/Final_Project/code/mux.tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_mux4x8to4_c
