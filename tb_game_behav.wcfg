@@ -12,12 +12,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="10.551 ns"></ZoomEndTime>
-      <Cursor1Time time="2.500 ns"></Cursor1Time>
+      <ZoomEndTime time="124.751 ns"></ZoomEndTime>
+      <Cursor1Time time="59.400 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="152"></ValueColumnWidth>
+      <ValueColumnWidth column_width="145"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="23" />
    <wvobject fp_name="/tb_game_player1_100/player1" type="array">
@@ -59,10 +59,12 @@
    <wvobject fp_name="/tb_game_player1_100/state_out" type="array">
       <obj_property name="ElementShortName">state_out[3:0]</obj_property>
       <obj_property name="ObjectShortName">state_out[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/tb_game_player1_100/uut/d" type="array">
       <obj_property name="ElementShortName">d[3:0]</obj_property>
       <obj_property name="ObjectShortName">d[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/tb_game_player1_100/uut/player_1_next" type="array">
       <obj_property name="ElementShortName">player_1_next[3:0]</obj_property>
@@ -99,10 +101,12 @@
    <wvobject fp_name="/tb_game_player1_100/uut/turn" type="array">
       <obj_property name="ElementShortName">turn[5:0]</obj_property>
       <obj_property name="ObjectShortName">turn[5:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/tb_game_player1_100/uut/wrong_turn" type="array">
       <obj_property name="ElementShortName">wrong_turn[5:0]</obj_property>
       <obj_property name="ObjectShortName">wrong_turn[5:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/tb_game_player1_100/uut/wrong" type="logic">
       <obj_property name="ElementShortName">wrong</obj_property>
