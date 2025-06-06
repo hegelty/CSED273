@@ -9,6 +9,7 @@ module encoder8to3(
     assign out[0] = in[7] | in[5] | in[3] | in[1];
 endmodule
 
+// encoder that encodes the highest priority input
 module priority_encoder8to3(
     input [7:0] in,
     output [2:0] out
@@ -32,7 +33,7 @@ module priority_encoder8to3(
     wire y1 = in[1] & ~h1;
     wire y0 = in[0] & ~h0;
 
-    encoder8to3 encode_inst (
+    encoder8to3 encoder_inst (
         .in({y7, y6, y5, y4, y3, y2, y1, y0}),
         .out(out)
     );
