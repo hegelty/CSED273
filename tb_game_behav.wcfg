@@ -3,118 +3,112 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="tb_game_behav.wdb" id="1">
+      <db_ref path="tb_game_comprehensive_behav.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
-            <top_module name="tb_game" />
+            <top_module name="tb_game_comprehensive" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000 ns"></ZoomStartTime>
-      <ZoomEndTime time="247.400001 ns"></ZoomEndTime>
-      <Cursor1Time time="73.700000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000000000 us"></ZoomStartTime>
+      <ZoomEndTime time="2,096.000000001 us"></ZoomEndTime>
+      <Cursor1Time time="0.058533123 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="166"></ValueColumnWidth>
+      <ValueColumnWidth column_width="159"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="24" />
-   <wvobject fp_name="/tb_game/player1" type="array">
+   <WVObjectSize size="23" />
+   <wvobject fp_name="/tb_game_comprehensive/player1" type="array">
       <obj_property name="ElementShortName">player1[2:0]</obj_property>
       <obj_property name="ObjectShortName">player1[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/player2" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/player2" type="array">
       <obj_property name="ElementShortName">player2[2:0]</obj_property>
       <obj_property name="ObjectShortName">player2[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/player3" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/player3" type="array">
       <obj_property name="ElementShortName">player3[2:0]</obj_property>
       <obj_property name="ObjectShortName">player3[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/player4" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/player4" type="array">
       <obj_property name="ElementShortName">player4[2:0]</obj_property>
       <obj_property name="ObjectShortName">player4[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/player5" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/player5" type="array">
       <obj_property name="ElementShortName">player5[2:0]</obj_property>
       <obj_property name="ObjectShortName">player5[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/player6" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/player6" type="array">
       <obj_property name="ElementShortName">player6[2:0]</obj_property>
       <obj_property name="ObjectShortName">player6[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/player_clk" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/player_clk" type="array">
       <obj_property name="ElementShortName">player_clk[5:0]</obj_property>
       <obj_property name="ObjectShortName">player_clk[5:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/reset_n" type="logic">
+   <wvobject fp_name="/tb_game_comprehensive/reset_n" type="logic">
       <obj_property name="ElementShortName">reset_n</obj_property>
       <obj_property name="ObjectShortName">reset_n</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/out" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/out" type="array">
       <obj_property name="ElementShortName">out[2:0]</obj_property>
       <obj_property name="ObjectShortName">out[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/state_out" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/state_out" type="array">
       <obj_property name="ElementShortName">state_out[3:0]</obj_property>
       <obj_property name="ObjectShortName">state_out[3:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/uut/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_game/uut/d" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/uut/d" type="array">
       <obj_property name="ElementShortName">d[3:0]</obj_property>
       <obj_property name="ObjectShortName">d[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/uut/player_1_next" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/uut/player_1_next" type="array">
       <obj_property name="ElementShortName">player_1_next[3:0]</obj_property>
       <obj_property name="ObjectShortName">player_1_next[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/uut/player_2_next" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/uut/player_2_next" type="array">
       <obj_property name="ElementShortName">player_2_next[3:0]</obj_property>
       <obj_property name="ObjectShortName">player_2_next[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/uut/player_3_next" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/uut/player_3_next" type="array">
       <obj_property name="ElementShortName">player_3_next[3:0]</obj_property>
       <obj_property name="ObjectShortName">player_3_next[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/uut/player_4_next" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/uut/player_4_next" type="array">
       <obj_property name="ElementShortName">player_4_next[3:0]</obj_property>
       <obj_property name="ObjectShortName">player_4_next[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/uut/player_5_next" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/uut/player_5_next" type="array">
       <obj_property name="ElementShortName">player_5_next[3:0]</obj_property>
       <obj_property name="ObjectShortName">player_5_next[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/uut/player_6_next" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/uut/player_6_next" type="array">
       <obj_property name="ElementShortName">player_6_next[3:0]</obj_property>
       <obj_property name="ObjectShortName">player_6_next[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/uut/s_d" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/uut/s_d" type="array">
       <obj_property name="ElementShortName">s_d[3:0]</obj_property>
       <obj_property name="ObjectShortName">s_d[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/uut/right_d" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/uut/right_d" type="array">
       <obj_property name="ElementShortName">right_d[3:0]</obj_property>
       <obj_property name="ObjectShortName">right_d[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/uut/turn" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/uut/turn" type="array">
       <obj_property name="ElementShortName">turn[5:0]</obj_property>
       <obj_property name="ObjectShortName">turn[5:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/uut/wrong_turn" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/uut/wrong_turn" type="array">
       <obj_property name="ElementShortName">wrong_turn[5:0]</obj_property>
       <obj_property name="ObjectShortName">wrong_turn[5:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/uut/wrong" type="logic">
+   <wvobject fp_name="/tb_game_comprehensive/uut/wrong" type="logic">
       <obj_property name="ElementShortName">wrong</obj_property>
       <obj_property name="ObjectShortName">wrong</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/uut/wrong_d" type="array">
+   <wvobject fp_name="/tb_game_comprehensive/uut/wrong_d" type="array">
       <obj_property name="ElementShortName">wrong_d[3:0]</obj_property>
       <obj_property name="ObjectShortName">wrong_d[3:0]</obj_property>
    </wvobject>

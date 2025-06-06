@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module tb_game;
+module tb_game_comprehensive;
 
     // Inputs
     reg  [2:0] player1;
@@ -9,14 +9,18 @@ module tb_game;
     reg  [2:0] player4;
     reg  [2:0] player5;
     reg  [2:0] player6;
-    reg  [5:0] player_clk;
+    reg  [5:0] player_clk;  // Active-High buttons
     reg        reset_n;
 
     // Outputs
-    wire [2:0] out;         // 패배한 플레이어 번호 (000: 없음)
-    wire [3:0] state_out;   // 현재 상태 또는 패배 상태 (MSB가 1이면 패배 상태)
+    wire [2:0] out;         // 패배자 번호 (없으면 000)
+    wire [3:0] state_out;   // {패배플래그, 번호} 혹은 진행 중 플레이어 번호
 
-    // Instantiate the DUT
+    // 내부 변수
+    integer i;
+    reg [2:0] choices [0:3];
+
+    // DUT 인스턴스
     game uut (
         .player1    (player1),
         .player2    (player2),
@@ -30,69 +34,145 @@ module tb_game;
         .state_out  (state_out)
     );
 
-    initial begin
-        $dumpfile("tb_game.vcd");
-        $dumpvars(0, tb_game);
+    // 모니터링: 매 상태 변화 시점마다 출력
+    always @(state_out or out) begin
+        $display("[Time=%0t] state_out=%b, out=%b", $time, state_out, out);
+    end
 
-        // 1) 초기화 및 리셋
+    // choices 초기화
+    initial begin
+        choices[0] = 3'b001;
+        choices[1] = 3'b010;
+        choices[2] = 3'b100;
+        choices[3] = 3'b101;
+    end
+
+    initial begin
+        $dumpfile("tb_game_comprehensive.vcd");
+        $dumpvars(0, tb_game_comprehensive);
+
+        //===============================================================
+        // 1) Reset 및 초기화
+        //===============================================================
         player1    = 3'b000;
         player2    = 3'b000;
         player3    = 3'b000;
         player4    = 3'b000;
         player5    = 3'b000;
         player6    = 3'b000;
-        player_clk = 6'b000000;
-        reset_n    = 1'b0;
-
+        player_clk = 6'b000000;  // 모두 idle (active-high이므로 0)
+        reset_n    = 1'b0;       // Active-Low reset
         #20;
-        reset_n = 1'b1;      // 리셋 해제 (게임 시작: 플레이어1의 차례가 되어야 함)
+        reset_n = 1'b1;          // 리셋 해제 → state_out = 4'b0001 (플레이어1 차례)
+        #10;
 
-        // 2) 정상 진행: 플레이어1의 턴 → 유효 입력 (예: "두모" = 2)
+        //===============================================================
+        // 1. 패배 없이 10턴 이상 이어지는 게임
+        //    - 플레이어별로 각 턴에 choices 중 하나를 순환하여 입력
+        //===============================================================
+        $display("=== Scenario 1: 10턴 동안 무패 진행 (다양한 입력) ===");
+        for (i = 0; i < 10; i = i + 1) begin
+            case (state_out[2:0])
+                3'b001: player1 = choices[i % 4];
+                3'b010: player2 = choices[i % 4];
+                3'b011: player3 = choices[i % 4];
+                3'b100: player4 = choices[i % 4];
+                3'b101: player5 = choices[i % 4];
+                3'b110: player6 = choices[i % 4];
+                default: ;
+            endcase
+            // 버튼 눌림 (Active-High)
+            #5;
+            player_clk[state_out[2:0] - 1] = 1'b1;
+            #5;
+            player_clk = 6'b000000;
+            #5;
+        end
+        // 10턴 이후 state_out 확인
+        $display("After 10 varied-turns → state_out = %b, out = %b", state_out, out);
         #20;
-        player1    = 3'b010;     // 2: 왼쪽 한 칸으로 턴 이동
-        player_clk = 6'b000001;  // player1 버튼 누름
-        #10;
-        player_clk = 6'b000000;  // 버튼 떼기
 
-        // 3) 다음 플레이어 (player2) 차례: 유효 입력 (예: "1")
+        //===============================================================
+        // 2. 자신의 차례가 아닌 사람이 CLK를 입력하는 경우
+        //===============================================================
+        $display("=== Scenario 2: 비턴 플레이어가 버튼 입력 → 즉시 패배 ===");
+        // state_out이 플레이어5 차례라 가정
+        #5;
+        player3 = 3'b010;  
+        #2;
+        player_clk[2] = 1'b1;  
+        #3;
+        player_clk = 6'b000000; 
+        #10;
+        $display("Scenario2 result → state_out = %b, out = %b", state_out, out);
         #20;
-        player2    = 3'b001;     // 1: 왼쪽 두 칸으로 턴 이동
-        player_clk = 6'b000010;  // player2 버튼 누름
-        #10;
-        player_clk = 6'b000000;
 
-        // 4) 다음 플레이어 (player4) 차례: 치명적 입력 ("세모" = 3 → 즉시 패배)
+        // 리셋하여 다음 시나리오 준비
+        reset_n = 1'b0;
+        #10;
+        reset_n = 1'b1;
+        player_clk = 6'b000000;
+        #10;
+
+        //===============================================================
+        // 3. 자신의 차례인 사람과 자신의 차례가 아닌 사람이 동시에 CLK 입력
+        //===============================================================
+        $display("=== Scenario 3: Turn 플레이어 & 비턴 플레이어 동시 입력 ===");
+        player1 = 3'b000;
+        player2 = 3'b000;
+        #5;
+        player_clk[0] = 1'b1; // player1
+        player_clk[1] = 1'b1; // player2
+        #5;
+        player_clk = 6'b000000;
+        #10;
+        $display("Scenario3 result → state_out = %b, out = %b", state_out, out);
         #20;
-        player4    = 3'b011;     // 3: 즉시 패배 상태
-        player_clk = 6'b000100;  // player4 버튼 누름
+
+        // 리셋
+        reset_n = 1'b0;
         #10;
+        reset_n = 1'b1;
         player_clk = 6'b000000;
-
-        // 5) 패배가 선언된 이후에도, 혹시 잘못된 동작이 없는지 확인하기 위해
-        //    out과 state_out을 계속 관찰. 상태가 L_004 (player4 패배)여야 함.
-
-        #50;
-        // 6) out-of-turn 입력 테스트: 현재 이미 패배 상태이므로
-        //    player3가 버튼을 누르면 out이 3이 되어야 함.
-        player3    = 3'b010;     // 임의의 수
-        player_clk = 6'b000100;  // player3 버튼 누름 (3번째 비트 = index 2)
         #10;
-        player_clk = 6'b000000;
 
-        #30;
+        //===============================================================
+        // 4a. 복합 시나리오: Turn 먼저 누르고 → Other 지연 입력
+        //===============================================================
+        $display("=== Scenario 4a: Turn 먼저 → Other 지연 입력 ===");
+        player1 = 3'b000;
+        player2 = 3'b000;
+        #5;
+        player_clk[0] = 1'b1; // player1 pressed
+        #2;
+        player_clk[1] = 1'b1; // player2 pressed (딜레이)
+        #3;
+        player_clk = 6'b000000;
+        #10;
+        $display("Scenario4a result → state_out = %b, out = %b", state_out, out);
+        #20;
+
+        // 리셋 후 준비
+        reset_n = 1'b0;
+        #10;
+        reset_n = 1'b1;
+        player_clk = 6'b000000;
+        #10;
+
+        $display("=== Scenario 4b: Other 먼저 → Turn 늦게 입력 ===");
+        player1 = 3'b000;
+        player2 = 3'b000;
+        #5;
+        player_clk[1] = 1'b1; // player2 pressed first
+        #5;
+        player_clk[0] = 1'b1; // player1 pressed later
+        #3;
+        player_clk = 6'b000000;
+        #10;
+        $display("Scenario4b result → state_out = %b, out = %b", state_out, out);
+        #20;
+
         $finish;
-    end
-
-    // 모니터링
-    initial begin
-        $display("Time\treset_n\tplayer_clk\tp1 p2 p3 p4 p5 p6\t| state_out\tout");
-        $monitor("%0dns\t  %b\t  %06b\t   %03b %03b %03b %03b %03b %03b\t |   %04b   \t%03b",
-                 $time,
-                 reset_n,
-                 player_clk,
-                 player1, player2, player3, player4, player5, player6,
-                 state_out,
-                 out);
     end
 
 endmodule

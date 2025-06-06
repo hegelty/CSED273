@@ -83,7 +83,7 @@ module game(
         .in_5(4'b0001),
         .in_4(4'b0110),
         .in_3(4'b1101),
-        .in_2(4'b0101),
+        .in_2(4'b0100),
         .in_1(4'b0011),
         .in_0(4'b1101),
         .select(player5),
@@ -96,8 +96,8 @@ module game(
         .in_5(4'b0010),
         .in_4(4'b0001),
         .in_3(4'b1110),
-        .in_2(4'b0110),
-        .in_1(4'b0101),
+        .in_2(4'b0101),
+        .in_1(4'b0100),
         .in_0(4'b1110),
         .select(player6),
         .out(player_6_next)
@@ -106,7 +106,7 @@ module game(
     // state that the current player's turn
     wire [3:0] s_d;
     mux4x8to4_c mux_write_turn_out(
-        .in_7(0),
+        .in_7(4'b0000),
         .in_6(player_6_next),
         .in_5(player_5_next),
         .in_4(player_4_next),
@@ -148,7 +148,7 @@ module game(
     wire wrong;
     wire [3:0] wrong_d;
     assign wrong = wrong_turn[0] | wrong_turn[1] | wrong_turn[2] | wrong_turn[3] | wrong_turn[4] | wrong_turn[5];
-    encoder8to3 encode_wrong_player(
+    priority_encoder8to3 encode_wrong_player(
         .in({1'b0, wrong_turn[5], wrong_turn[4], wrong_turn[3], wrong_turn[2], wrong_turn[1], wrong_turn[0] , 1'b0}),
         .out(wrong_d[2:0])
     );

@@ -134,6 +134,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports {JA[2]}]
 #Sch name = JA4
 set_property PACKAGE_PIN G2 [get_ports {JA[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {JA[3]}]
+set_property PULLDOWN true [get_ports {JA[3]}]
 #Sch name = JA7
 set_property PACKAGE_PIN H1 [get_ports {JA[4]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {JA[4]}]
@@ -146,6 +147,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports {JA[6]}]
 #Sch name = JA10
 set_property PACKAGE_PIN G3 [get_ports {JA[7]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {JA[7]}]
+set_property PULLDOWN true [get_ports {JA[7]}]
 
 
 
@@ -162,6 +164,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports {JB[2]}]
 #Sch name = JB4
 set_property PACKAGE_PIN B16 [get_ports {JB[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {JB[3]}]
+set_property PULLDOWN true [get_ports {JB[3]}]
 #Sch name = JB7
 set_property PACKAGE_PIN A15 [get_ports {JB[4]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {JB[4]}]
@@ -174,6 +177,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports {JB[6]}]
 #Sch name = JB10
 set_property PACKAGE_PIN C16 [get_ports {JB[7]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {JB[7]}]
+set_property PULLDOWN true [get_ports {JB[7]}]
 
 
 
@@ -190,6 +194,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports {JC[2]}]
 #Sch name = JC4
 set_property PACKAGE_PIN P18 [get_ports {JC[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {JC[3]}]
+set_property PULLDOWN true [get_ports {JC[3]}]
 #Sch name = JC7
 set_property PACKAGE_PIN L17 [get_ports {JC[4]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {JC[4]}]
@@ -202,6 +207,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports {JC[6]}]
 #Sch name = JC10
 set_property PACKAGE_PIN R18 [get_ports {JC[7]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {JC[7]}]
+set_property PULLDOWN true [get_ports {JC[7]}]
 
 
 #Pmod Header JXADC

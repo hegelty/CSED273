@@ -12,6 +12,11 @@ module edge_trigger_JK_FF(input reset_n, input j, input k, input clk, output reg
         q_ = ~reset_n | ~q;
     end
 
+    always @(negedge reset_n) begin
+        q  = 0;
+        q_ = 1;
+    end
+
 endmodule
 
 module edge_trigger_D_FF(input reset_n, input d, input clk, output q, output q_);   
@@ -35,6 +40,11 @@ module edge_trigger_JK_FF_reset_as_1(input reset_n, input j, input k, input clk,
     always @(negedge clk) begin
         q  = (~reset_n) | ((j & ~q) | (~k & q));
         q_ = reset_n & ~q;
+    end
+
+    always @(negedge reset_n) begin
+        q  = 1;
+        q_ = 0;
     end
 endmodule
 

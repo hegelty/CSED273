@@ -3,9 +3,9 @@
 Nov  8 2024
 22:36:57
 D:/Programming/CSED273/Final_Project/Final_Project.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,,,,,,,
-D:/Programming/CSED273/Final_Project/code/encoder.v,1749198013,verilog,,D:/Programming/CSED273/Final_Project/code/ff.v,,encoder8to3,,,,,,,,
-D:/Programming/CSED273/Final_Project/code/ff.v,1749199465,verilog,,D:/Programming/CSED273/Final_Project/code/game.v,,edge_trigger_D_FF;edge_trigger_D_FF_reset_as_1;edge_trigger_JK_FF;edge_trigger_JK_FF_reset_as_1,,,,,,,,
-D:/Programming/CSED273/Final_Project/code/game.v,1749199389,verilog,,D:/Programming/CSED273/Final_Project/code/mux.v,,game,,,,,,,,
-D:/Programming/CSED273/Final_Project/code/mux.v,1749194281,verilog,,D:/Programming/CSED273/Final_Project/code/tb/game.tb.v,,mux2to1;mux3x2to3_c;mux4to1;mux4x2to4_c;mux4x8to4;mux4x8to4_c;mux8to1,,,,,,,,
+D:/Programming/CSED273/Final_Project/code/encoder.v,1749201735,verilog,,D:/Programming/CSED273/Final_Project/code/ff.v,,encoder8to3;priority_encoder8to3,,,,,,,,
+D:/Programming/CSED273/Final_Project/code/ff.v,1749205537,verilog,,D:/Programming/CSED273/Final_Project/code/game.v,,edge_trigger_D_FF;edge_trigger_D_FF_reset_as_1;edge_trigger_JK_FF;edge_trigger_JK_FF_reset_as_1,,,,,,,,
+D:/Programming/CSED273/Final_Project/code/game.v,1749202331,verilog,,D:/Programming/CSED273/Final_Project/code/mux.v,,game,,,,,,,,
+D:/Programming/CSED273/Final_Project/code/mux.v,1749199695,verilog,,D:/Programming/CSED273/Final_Project/code/tb/game.tb.v,,mux2to1;mux3x2to3_c;mux4to1;mux4x2to4_c;mux4x8to4;mux4x8to4_c;mux8to1,,,,,,,,
 D:/Programming/CSED273/Final_Project/code/segment.v,1749109970,verilog,,,,bcd_to_7seg;led_renderer,,,,,,,,
-D:/Programming/CSED273/Final_Project/code/tb/game.tb.v,1749197869,verilog,,,,tb_game,,,,,,,,
+D:/Programming/CSED273/Final_Project/code/tb/game.tb.v,1749197869,verilog,,,,tb_game_comprehensive,,,,,,,,
