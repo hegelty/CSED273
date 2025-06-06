@@ -691,3 +691,38 @@ Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (
 Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1857.875 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/Programming/CSED273/Final/Final.runs/impl_1/top_routed.dcp' has been generated.
 INFO: [Common 17-206] Exiting Vivado at Thu Jun  5 18:35:58 2025...
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Jun  5 18:36:16 2025
+# Process ID         : 33400
+# Current directory  : D:/Programming/CSED273/Final/Final.runs/impl_1
+# Command line       : vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+# Log file           : D:/Programming/CSED273/Final/Final.runs/impl_1/top.vdi
+# Journal file       : D:/Programming/CSED273/Final/Final.runs/impl_1\vivado.jou
+# Running On         : hegelty_laptop
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13900H
+# CPU Frequency      : 2995 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 42558 MB
+# Swap memory        : 2684 MB
+# Total Virtual      : 45242 MB
+# Available Virtual  : 10751 MB
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: open_checkpoint top_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 286.941 ; gain = 3.609
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 489.441 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 580.684 ; gain = 0.000
+INFO: [Timing 38-478] Restoring timing data from binary archive.

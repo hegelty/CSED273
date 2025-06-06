@@ -21,3 +21,4 @@
 # Total Virtual      : 45242 MB
 # Available Virtual  : 10751 MB
 #-----------------------------------------------------------
+source top.tcl -notrace
