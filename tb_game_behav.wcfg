@@ -12,12 +12,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000000 ns"></ZoomStartTime>
-      <ZoomEndTime time="246.700001 ns"></ZoomEndTime>
-      <Cursor1Time time="50.400000 ns"></Cursor1Time>
+      <ZoomEndTime time="247.400001 ns"></ZoomEndTime>
+      <Cursor1Time time="73.700000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="173"></ValueColumnWidth>
+      <ValueColumnWidth column_width="166"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="24" />
    <wvobject fp_name="/tb_game/player1" type="array">
@@ -60,6 +60,7 @@
    <wvobject fp_name="/tb_game/state_out" type="array">
       <obj_property name="ElementShortName">state_out[3:0]</obj_property>
       <obj_property name="ObjectShortName">state_out[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/tb_game/uut/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
@@ -97,9 +98,9 @@
       <obj_property name="ElementShortName">s_d[3:0]</obj_property>
       <obj_property name="ObjectShortName">s_d[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_game/uut/right_d" type="logic">
-      <obj_property name="ElementShortName">right_d</obj_property>
-      <obj_property name="ObjectShortName">right_d</obj_property>
+   <wvobject fp_name="/tb_game/uut/right_d" type="array">
+      <obj_property name="ElementShortName">right_d[3:0]</obj_property>
+      <obj_property name="ObjectShortName">right_d[3:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_game/uut/turn" type="array">
       <obj_property name="ElementShortName">turn[5:0]</obj_property>
