@@ -1,4 +1,4 @@
-`timescale 1ps/1ps
+`timescale 1ns / 1ps
 
 module encoder8to3(
     input [7:0] in,

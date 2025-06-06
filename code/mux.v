@@ -1,4 +1,4 @@
-`timescale 1ps / 1fs
+`timescale 1ns / 1ps
 
 module mux2to1(
     input [1:0] in,

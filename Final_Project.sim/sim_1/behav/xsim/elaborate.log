@@ -1,16 +1,15 @@
 Vivado Simulator v2024.2.0
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: D:/Xlinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_game_comprehensive_behav xil_defaultlib.tb_game_comprehensive xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Xlinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_game_player1_100_behav xil_defaultlib.tb_game_player1_100 xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'in_0' [D:/Programming/CSED273/Final_Project/code/game.v:116]
 WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 'select' [D:/Programming/CSED273/Final_Project/code/game.v:117]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
-Time Resolution for simulation is 1fs
+Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.edge_trigger_JK_FF
 Compiling module xil_defaultlib.edge_trigger_D_FF
 Compiling module xil_defaultlib.edge_trigger_JK_FF_reset_as_1
@@ -25,6 +24,6 @@ Compiling module xil_defaultlib.encoder8to3
 Compiling module xil_defaultlib.priority_encoder8to3
 Compiling module xil_defaultlib.mux3x2to3_c
 Compiling module xil_defaultlib.game
-Compiling module xil_defaultlib.tb_game_comprehensive
+Compiling module xil_defaultlib.tb_game_player1_100
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_game_comprehensive_behav
+Built simulation snapshot tb_game_player1_100_behav

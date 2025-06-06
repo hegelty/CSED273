@@ -1,4 +1,4 @@
-`timescale 1ns/1ps
+`timescale 1ps / 1ns
 
 module tb_mux4x8to4_c;
 

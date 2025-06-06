@@ -1,0 +1,348 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri Jun  6 21:29:22 2025
+# Process ID         : 5168
+# Current directory  : D:/Programming/CSED273/Final_Project/Final_Project.runs/synth_1
+# Command line       : vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file           : D:/Programming/CSED273/Final_Project/Final_Project.runs/synth_1/top.vds
+# Journal file       : D:/Programming/CSED273/Final_Project/Final_Project.runs/synth_1\vivado.jou
+# Running On         : hegelty_laptop
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13900H
+# CPU Frequency      : 2995 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 42558 MB
+# Swap memory        : 2684 MB
+# Total Virtual      : 45242 MB
+# Available Virtual  : 11383 MB
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental D:/Programming/CSED273/Final_Project/Final_Project.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/Programming/CSED273/Final_Project/Final_Project.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18100
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 951.699 ; gain = 467.867
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [D:/Programming/CSED273/Final_Project/code/main.v:3]
+INFO: [Synth 8-6157] synthesizing module 'game' [D:/Programming/CSED273/Final_Project/code/game.v:3]
+INFO: [Synth 8-6157] synthesizing module 'edge_trigger_D_FF' [D:/Programming/CSED273/Final_Project/code/ff.v:22]
+INFO: [Synth 8-6157] synthesizing module 'edge_trigger_JK_FF' [D:/Programming/CSED273/Final_Project/code/ff.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'edge_trigger_JK_FF' (0#1) [D:/Programming/CSED273/Final_Project/code/ff.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'edge_trigger_D_FF' (0#1) [D:/Programming/CSED273/Final_Project/code/ff.v:22]
+INFO: [Synth 8-6157] synthesizing module 'edge_trigger_D_FF_reset_as_1' [D:/Programming/CSED273/Final_Project/code/ff.v:48]
+INFO: [Synth 8-6157] synthesizing module 'edge_trigger_JK_FF_reset_as_1' [D:/Programming/CSED273/Final_Project/code/ff.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'edge_trigger_JK_FF_reset_as_1' (0#1) [D:/Programming/CSED273/Final_Project/code/ff.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'edge_trigger_D_FF_reset_as_1' (0#1) [D:/Programming/CSED273/Final_Project/code/ff.v:48]
+INFO: [Synth 8-6157] synthesizing module 'mux4x8to4_c' [D:/Programming/CSED273/Final_Project/code/mux.v:87]
+INFO: [Synth 8-6157] synthesizing module 'mux4x8to4' [D:/Programming/CSED273/Final_Project/code/mux.v:57]
+INFO: [Synth 8-6157] synthesizing module 'mux8to1' [D:/Programming/CSED273/Final_Project/code/mux.v:34]
+INFO: [Synth 8-6157] synthesizing module 'mux4to1' [D:/Programming/CSED273/Final_Project/code/mux.v:11]
+INFO: [Synth 8-6157] synthesizing module 'mux2to1' [D:/Programming/CSED273/Final_Project/code/mux.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'mux2to1' (0#1) [D:/Programming/CSED273/Final_Project/code/mux.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'mux4to1' (0#1) [D:/Programming/CSED273/Final_Project/code/mux.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mux8to1' (0#1) [D:/Programming/CSED273/Final_Project/code/mux.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'mux4x8to4' (0#1) [D:/Programming/CSED273/Final_Project/code/mux.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'mux4x8to4_c' (0#1) [D:/Programming/CSED273/Final_Project/code/mux.v:87]
+WARNING: [Synth 8-689] width (4) of port connection 'select' does not match port width (3) of module 'mux4x8to4_c' [D:/Programming/CSED273/Final_Project/code/game.v:117]
+INFO: [Synth 8-6157] synthesizing module 'mux4x2to4_c' [D:/Programming/CSED273/Final_Project/code/mux.v:146]
+INFO: [Synth 8-6155] done synthesizing module 'mux4x2to4_c' (0#1) [D:/Programming/CSED273/Final_Project/code/mux.v:146]
+INFO: [Synth 8-6157] synthesizing module 'priority_encoder8to3' [D:/Programming/CSED273/Final_Project/code/encoder.v:13]
+INFO: [Synth 8-6157] synthesizing module 'encoder8to3' [D:/Programming/CSED273/Final_Project/code/encoder.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'encoder8to3' (0#1) [D:/Programming/CSED273/Final_Project/code/encoder.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'priority_encoder8to3' (0#1) [D:/Programming/CSED273/Final_Project/code/encoder.v:13]
+INFO: [Synth 8-6157] synthesizing module 'mux3x2to3_c' [D:/Programming/CSED273/Final_Project/code/mux.v:177]
+INFO: [Synth 8-6155] done synthesizing module 'mux3x2to3_c' (0#1) [D:/Programming/CSED273/Final_Project/code/mux.v:177]
+INFO: [Synth 8-6155] done synthesizing module 'game' (0#1) [D:/Programming/CSED273/Final_Project/code/game.v:3]
+INFO: [Synth 8-6157] synthesizing module 'display_segment' [D:/Programming/CSED273/Final_Project/code/segment.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'display_segment' (0#1) [D:/Programming/CSED273/Final_Project/code/segment.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [D:/Programming/CSED273/Final_Project/code/main.v:3]
+WARNING: [Synth 8-7129] Port in[0] in module encoder8to3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[11] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[10] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[9] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[8] in module top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1058.410 ; gain = 574.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1058.410 ; gain = 574.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1058.410 ; gain = 574.578
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1058.410 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:9]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports CLK100MHZ]'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:9]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'dp'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dp'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp6'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:233]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:233]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp14'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:235]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:235]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp7'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:237]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:237]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp15'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:239]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:239]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn6'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:241]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:241]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn14'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:243]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:243]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn7'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:245]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:245]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp15'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:247]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:247]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn15'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:248]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:248]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp7'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:249]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:249]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn7'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:250]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:250]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp14'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:251]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:251]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn14'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:252]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:252]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp6'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:253]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:253]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn6'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:254]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:254]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn15'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:255]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:255]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'led_OBUF[3]'. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:321]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc:321]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Programming/CSED273/Final_Project/code/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1152.793 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1152.793 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 1152.793 ; gain = 668.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 1152.793 ; gain = 668.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 1152.793 ; gain = 668.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 1152.793 ; gain = 668.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design top has port an[3] driven by constant 1
+WARNING: [Synth 8-3917] design top has port an[2] driven by constant 1
+WARNING: [Synth 8-3917] design top has port an[1] driven by constant 1
+WARNING: [Synth 8-7129] Port led[11] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[10] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[9] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[8] in module top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 1152.793 ; gain = 668.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1244.145 ; gain = 760.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1244.145 ; gain = 760.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1255.039 ; gain = 771.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6030] Inout pin 'JA[7]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [D:/Programming/CSED273/Final_Project/code/main.v:3]
+CRITICAL WARNING: [Synth 8-6030] Inout pin 'JA[6]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [D:/Programming/CSED273/Final_Project/code/main.v:3]
+CRITICAL WARNING: [Synth 8-6030] Inout pin 'JA[5]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [D:/Programming/CSED273/Final_Project/code/main.v:3]
+CRITICAL WARNING: [Synth 8-6030] Inout pin 'JA[4]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [D:/Programming/CSED273/Final_Project/code/main.v:3]
+CRITICAL WARNING: [Synth 8-6030] Inout pin 'JA[3]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [D:/Programming/CSED273/Final_Project/code/main.v:3]
+CRITICAL WARNING: [Synth 8-6030] Inout pin 'JA[2]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [D:/Programming/CSED273/Final_Project/code/main.v:3]
+CRITICAL WARNING: [Synth 8-6030] Inout pin 'JA[1]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [D:/Programming/CSED273/Final_Project/code/main.v:3]
+CRITICAL WARNING: [Synth 8-6030] Inout pin 'JA[0]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [D:/Programming/CSED273/Final_Project/code/main.v:3]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:30 . Memory (MB): peak = 1469.336 ; gain = 985.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:30 . Memory (MB): peak = 1469.336 ; gain = 985.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:30 . Memory (MB): peak = 1469.336 ; gain = 985.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:30 . Memory (MB): peak = 1469.336 ; gain = 985.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:30 . Memory (MB): peak = 1469.336 ; gain = 985.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:30 . Memory (MB): peak = 1469.336 ; gain = 985.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT2  |     1|
+|2     |LUT3  |     2|
+|3     |LUT4  |    18|
+|4     |LUT5  |    21|
+|5     |LUT6  |     9|
+|6     |FDCE  |     3|
+|7     |FDPE  |     1|
+|8     |IBUF  |    25|
+|9     |OBUF  |    23|
+|10    |OBUFT |     4|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:30 . Memory (MB): peak = 1469.336 ; gain = 985.504
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 8 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:28 . Memory (MB): peak = 1469.336 ; gain = 891.121
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:30 . Memory (MB): peak = 1469.336 ; gain = 985.504
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1469.336 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1469.336 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 8bcec884
+INFO: [Common 17-83] Releasing license: Synthesis
+51 Infos, 36 Warnings, 30 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:35 . Memory (MB): peak = 1469.336 ; gain = 1176.801
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1469.336 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Programming/CSED273/Final_Project/Final_Project.runs/synth_1/top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jun  6 21:29:58 2025...

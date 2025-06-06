@@ -6,6 +6,8 @@ INFO: [VRFC 10-311] analyzing module edge_trigger_JK_FF
 INFO: [VRFC 10-311] analyzing module edge_trigger_D_FF
 INFO: [VRFC 10-311] analyzing module edge_trigger_JK_FF_reset_as_1
 INFO: [VRFC 10-311] analyzing module edge_trigger_D_FF_reset_as_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/CSED273/Final_Project/code/tb/game.tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_game_player1_100
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/CSED273/Final_Project/code/game.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module game
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/CSED273/Final_Project/code/mux.v" into library xil_defaultlib
@@ -16,5 +18,7 @@ INFO: [VRFC 10-311] analyzing module mux4x8to4
 INFO: [VRFC 10-311] analyzing module mux4x8to4_c
 INFO: [VRFC 10-311] analyzing module mux4x2to4_c
 INFO: [VRFC 10-311] analyzing module mux3x2to3_c
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/CSED273/Final_Project/code/tb/game.tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_game_comprehensive
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/CSED273/Final_Project/code/segment.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_segment
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programming/CSED273/Final_Project/code/main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top

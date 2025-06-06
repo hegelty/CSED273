@@ -2,9 +2,11 @@
 verilog xil_defaultlib  \
 "../../../../code/encoder.v" \
 "../../../../code/ff.v" \
+"../../../../code/tb/game.tb.v" \
 "../../../../code/game.v" \
 "../../../../code/mux.v" \
-"../../../../code/tb/game.tb.v" \
+"../../../../code/segment.v" \
+"../../../../code/main.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
