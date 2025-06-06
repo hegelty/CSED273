@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Fri Jun  6 23:23:12 2025
+| Date         : Sat Jun  7 00:56:58 2025
 | Host         : hegelty_laptop running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
 | Design       : top
@@ -24,14 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 26
-+-------------+----------+-------------------------------------------------------------+--------+
-| Rule        | Severity | Description                                                 | Checks |
-+-------------+----------+-------------------------------------------------------------+--------+
-| CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1      |
-| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1      |
-| RPBF-3      | Warning  | IO port buffering is incomplete                             | 24     |
-+-------------+----------+-------------------------------------------------------------+--------+
+             Checks found: 25
++----------+----------+-----------------------------------------------------+--------+
+| Rule     | Severity | Description                                         | Checks |
++----------+----------+-----------------------------------------------------+--------+
+| CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1      |
+| RPBF-3   | Warning  | IO port buffering is incomplete                     | 24     |
++----------+----------+-----------------------------------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
@@ -46,13 +45,6 @@ Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_des
  #where value2 is the voltage provided to configuration bank 0
 
 Refer to the device configuration user guide for more information.
-Related violations: <none>
-
-PLHOLDVIO-2#1 Warning
-Non-Optimal connections which could lead to hold violations  
-A LUT db6/q_i_2__1 is driving clock pin of 4 cells. This could lead to large hold time violations. Involved cells are:
-game_inst/ff0/jk_ff/q_reg, game_inst/ff1/jk_ff/q_reg,
-game_inst/ff2/jk_ff/q_reg, game_inst/ff3/jk_ff/q_reg
 Related violations: <none>
 
 RPBF-3#1 Warning

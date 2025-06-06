@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-/* Negative edge triggered JK flip-flop */
+/* Positive edge triggered JK flip-flop */
 module edge_trigger_JK_FF(input reset_n, input j, input k, input clk, output reg q, output reg q_);  
     initial begin
       q = 0;

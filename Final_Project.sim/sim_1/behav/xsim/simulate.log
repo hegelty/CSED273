@@ -1,0 +1,29 @@
+Time resolution is 1 ps
+[Time=0] state_out=0001, out=000
+=== Scenario 1: 10턴 동안 무패 진행 (다양한 입력) ===
+[Time=40000] state_out=0101, out=000
+[Time=55000] state_out=0100, out=000
+[Time=70000] state_out=0101, out=000
+[Time=85000] state_out=0001, out=000
+[Time=100000] state_out=0101, out=000
+[Time=115000] state_out=0100, out=000
+[Time=130000] state_out=0101, out=000
+[Time=145000] state_out=0001, out=000
+[Time=160000] state_out=0101, out=000
+[Time=175000] state_out=0100, out=000
+After 10 varied-turns → state_out = 0100, out = 000
+=== Scenario 2: 비턴 플레이어가 버튼 입력 → 즉시 패배 ===
+Scenario2 result → state_out = 0100, out = 000
+[Time=240000] state_out=0001, out=000
+=== Scenario 3: Turn 플레이어 & 비턴 플레이어 동시 입력 ===
+[Time=270000] state_out=1001, out=001
+Scenario3 result → state_out = 1001, out = 001
+[Time=300000] state_out=0001, out=000
+=== Scenario 4a: Turn 먼저 → Other 지연 입력 ===
+[Time=330000] state_out=1001, out=001
+Scenario4a result → state_out = 1001, out = 001
+[Time=360000] state_out=0001, out=000
+=== Scenario 4b: Other 먼저 → Turn 늦게 입력 ===
+[Time=393000] state_out=1001, out=001
+Scenario4b result → state_out = 1001, out = 001
+$finish called at time : 423 ns : File "D:/Programming/CSED273/Final_Project/code/tb/game.tb.v" Line 175
