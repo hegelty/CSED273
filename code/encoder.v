@@ -1,8 +1,8 @@
 `timescale 1ps/1ps
 
-module decoder8to3(
+module encoder8to3(
     input [7:0] in,
-    output reg [2:0] out
+    output [2:0] out
 );
     assign out[2] = in[7] | in[6] | in[5] | in[4];
     assign out[1] = in[7] | in[6] | in[3] | in[2];

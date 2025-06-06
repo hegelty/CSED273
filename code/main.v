@@ -41,7 +41,7 @@ module top (
         .player5(1'b0),
         .player6(1'b0),
         .player_clk(player_clk),
-        .reset_n(btnC),
+        .reset_n(~btnC),
         .out(out),
         .state_out(state)
     );

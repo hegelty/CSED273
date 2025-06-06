@@ -1,7 +1,10 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
+"../../../../code/encoder.v" \
+"../../../../code/ff.v" \
+"../../../../code/game.v" \
 "../../../../code/mux.v" \
-"../../../../code/mux.tb.v" \
+"../../../../code/tb/game.tb.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

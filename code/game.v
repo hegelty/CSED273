@@ -21,7 +21,7 @@ module game(
     edge_trigger_D_FF ff3(reset_n, d[3], clk, state[3], state_[3]);
     edge_trigger_D_FF ff2(reset_n, d[2], clk, state[2], state_[2]);
     edge_trigger_D_FF ff1(reset_n, d[1], clk, state[1], state_[1]);
-    edge_trigger_D_FF ff0(reset_n, d[0], clk, state[0], state_[0]);
+    edge_trigger_D_FF_reset_as_1 ff0(reset_n, d[0], clk, state[0], state_[0]);
 
     // state that will be used to determine when the current player's turn
     wire [3:0] player_1_next, player_2_next, player_3_next, player_4_next, player_5_next, player_6_next;
@@ -118,9 +118,9 @@ module game(
         .out(s_d)
     );
 
-    wire right_d;
+    wire [3:0] right_d;
     // L -> S_001, else s_d
-    mux4x2to4_c mux_d(
+    mux4x2to4_c mux_right_d(
         .in_1(4'b0001),
         .in_0(s_d),
         .select(state[3]),
@@ -130,12 +130,12 @@ module game(
     // wrong turn
     // clk=1 2개 이상 -> 다른 와이어 하나 1로 만들기 ->조건문 앞에서부터 -> d를 적용
     wire [5:0] turn;
-    assign turn[0] = state[3] & ~state[2] & ~state[1] &  state[0]; // S_001
-    assign turn[1] = state[3] & ~state[2] &  state[1] & ~state[0]; // S_010
-    assign turn[2] = state[3] & ~state[2] &  state[1] &  state[0]; // S_011
-    assign turn[3] = state[3] &  state[2] & ~state[1] & ~state[0]; // S_100
-    assign turn[4] = state[3] &  state[2] & ~state[1] &  state[0]; // S_101
-    assign turn[5] = state[3] &  state[2] &  state[1] & ~state[0]; // S_110
+    assign turn[0] = ~state[3] & ~state[2] & ~state[1] &  state[0]; // S_001
+    assign turn[1] = ~state[3] & ~state[2] &  state[1] & ~state[0]; // S_010
+    assign turn[2] = ~state[3] & ~state[2] &  state[1] &  state[0]; // S_011
+    assign turn[3] = ~state[3] &  state[2] & ~state[1] & ~state[0]; // S_100
+    assign turn[4] = ~state[3] &  state[2] & ~state[1] &  state[0]; // S_101
+    assign turn[5] = ~state[3] &  state[2] &  state[1] & ~state[0]; // S_110
 
     wire [5:0] wrong_turn;
     assign wrong_turn[0] = player_clk[0] & ~turn[0];
@@ -148,11 +148,18 @@ module game(
     wire wrong;
     wire [3:0] wrong_d;
     assign wrong = wrong_turn[0] | wrong_turn[1] | wrong_turn[2] | wrong_turn[3] | wrong_turn[4] | wrong_turn[5];
-    encode8to3 encode_wrong_player(
+    encoder8to3 encode_wrong_player(
         .in({1'b0, wrong_turn[5], wrong_turn[4], wrong_turn[3], wrong_turn[2], wrong_turn[1], wrong_turn[0] , 1'b0}),
         .out(wrong_d[2:0])
     );
     assign wrong_d[3] = 1'b1;
+
+    mux4x2to4_c mux_d(
+        .in_1(wrong_d),
+        .in_0(right_d),
+        .select(wrong),
+        .out(d)
+    );
 
     // output
     assign state_out[0] = state[0];
@@ -160,9 +167,12 @@ module game(
     assign state_out[2] = state[2];
     assign state_out[3] = state[3];
 
-    assign out[0] = state[0];
-    assign out[1] = state[1];
-    assign out[2] = state[2];
+    mux3x2to3_c mux_out(
+        .in_1(state[2:0]),
+        .in_0(3'b000),
+        .select(state[3]),
+        .out(out)
+    );
 
     // TODO: 자기차례 아닐때 입력 구현
 
