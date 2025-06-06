@@ -1,31 +1,27 @@
 `timescale 1ns / 1ps
 
 module display_segment(
-    input  wire [2:0] val,
-    output wire [6:0] seg,
-    output wire [3:0] an
+    input  [2:0] val,
+    output [6:0] seg,
+    output [3:0] an
 );
-
-    wire eq1 = (~val[2] & ~val[1] &  val[0]); 
-    wire eq2 = (~val[2] &  val[1] & ~val[0]); 
-    wire eq3 = (~val[2] &  val[1] &  val[0]);
-    wire eq4 = ( val[2] & ~val[1] & ~val[0]); 
-    wire eq5 = ( val[2] & ~val[1] &  val[0]); 
-    wire eq6 = ( val[2] &  val[1] & ~val[0]); 
-
-    wire val_zero = (~val[2] & ~val[1] & ~val[0]);
-
-    wire sa = ~( eq2 | eq3 | eq5 | eq6 );
-    wire sb = ~( eq1 | eq2 | eq3 | eq4 );
-    wire sc = ~( eq1 | eq3 | eq4 | eq5 | eq6 );
-    wire sd = ~( eq2 | eq3 | eq5 | eq6 );
-    wire se = ~( eq2 | eq6 );
-    wire sf = ~( eq4 | eq5 | eq6 );
-    wire sg = ~( eq2 | eq3 | eq4 | eq5 | eq6 );
-
-    assign seg = { sa, sb, sc, sd, se, sf, sg };
-
-    wire an0 =  val_zero;
-    assign an   = {1'b1, 1'b1, 1'b1, an0};
+  // 8-bit look-up with a 8-to-1 mux, then drop the DP bit
+  wire [7:0] seg8;
+  mux8x8to8_c mux_seg (
+    .in_0(8'b11000000),
+    .in_1(8'b11111001),
+    .in_2(8'b10100100),
+    .in_3(8'b10110000),
+    .in_4(8'b10011001),
+    .in_5(8'b10010010),
+    .in_6(8'b10000010),
+    .in_7(0),  // blank for 7
+    .select(val),
+    .out(seg8)
+  );
+  assign seg = seg8[6:0];
+  // use only the first 4 bits
+  // do not display when the value is 0
+  assign an   = {1'b1, 1'b1, 1'b1, ~val[2] & ~val[1] & ~val[0]};
 
 endmodule

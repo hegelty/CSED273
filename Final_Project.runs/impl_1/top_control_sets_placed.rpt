@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Fri Jun  6 23:02:34 2025
+| Date         : Fri Jun  6 23:23:14 2025
 | Host         : hegelty_laptop running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -59,7 +59,7 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               0 |            0 |
-| No           | No                    | Yes                    |              22 |           13 |
+| No           | No                    | Yes                    |              22 |           12 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |             120 |           30 |
@@ -73,14 +73,14 @@ Table of Contents
 +----------------------+-----------------------+------------------+------------------+----------------+--------------+
 |     Clock Signal     |     Enable Signal     | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------------+-----------------------+------------------+------------------+----------------+--------------+
-| ~db5/clk             |                       | btnC_IBUF        |                2 |              4 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG |                       | btnC_IBUF        |               11 |             18 |         1.64 |
+| ~db6/clk             |                       | btnC_IBUF        |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG |                       | btnC_IBUF        |               10 |             18 |         1.80 |
+|  CLK100MHZ_IBUF_BUFG | db6/cnt[0]_i_1__4_n_0 | btnC_IBUF        |                5 |             20 |         4.00 |
 |  CLK100MHZ_IBUF_BUFG | db1/cnt[0]_i_1_n_0    | btnC_IBUF        |                5 |             20 |         4.00 |
 |  CLK100MHZ_IBUF_BUFG | db2/cnt[0]_i_1__0_n_0 | btnC_IBUF        |                5 |             20 |         4.00 |
 |  CLK100MHZ_IBUF_BUFG | db3/cnt[0]_i_1__1_n_0 | btnC_IBUF        |                5 |             20 |         4.00 |
 |  CLK100MHZ_IBUF_BUFG | db4/cnt[0]_i_1__2_n_0 | btnC_IBUF        |                5 |             20 |         4.00 |
 |  CLK100MHZ_IBUF_BUFG | db5/cnt[0]_i_1__3_n_0 | btnC_IBUF        |                5 |             20 |         4.00 |
-|  CLK100MHZ_IBUF_BUFG | db6/cnt[0]_i_1__4_n_0 | btnC_IBUF        |                5 |             20 |         4.00 |
 +----------------------+-----------------------+------------------+------------------+----------------+--------------+
 
 

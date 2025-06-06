@@ -198,3 +198,41 @@ module mux3x2to3_c(
     );
     assign out = in_muxed;
 endmodule
+
+module mux8x8to8_c(
+    input [7:0] in_7,
+    input [7:0] in_6,
+    input [7:0] in_5,
+    input [7:0] in_4,
+    input [7:0] in_3,
+    input [7:0] in_2,
+    input [7:0] in_1,
+    input [7:0] in_0,
+    input [2:0] select,
+    output [7:0] out
+);
+    mux4x8to4_c mux1 (
+        .in_7(in_7[3:0]),
+        .in_6(in_6[3:0]),
+        .in_5(in_5[3:0]),
+        .in_4(in_4[3:0]),
+        .in_3(in_3[3:0]),
+        .in_2(in_2[3:0]),
+        .in_1(in_1[3:0]),
+        .in_0(in_0[3:0]),
+        .select(select),
+        .out(out[3:0])
+    );
+    mux4x8to4_c mux2(
+        .in_7(in_7[7:4]),
+        .in_6(in_6[7:4]),
+        .in_5(in_5[7:4]),
+        .in_4(in_4[7:4]),
+        .in_3(in_3[7:4]),
+        .in_2(in_2[7:4]),
+        .in_1(in_1[7:4]),
+        .in_0(in_0[7:4]),
+        .select(select),
+        .out(out[7:4])
+    );
+endmodule

@@ -103,3 +103,13 @@
     <Process Command="vivado.bat" Owner="skxod" Host="HEGELTY_LAPTOP" Pid="30320" HostCore="20" HostMemory="042558271488">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="skxod" Host="HEGELTY_LAPTOP" Pid="25476" HostCore="20" HostMemory="042558271488">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="skxod" Host="HEGELTY_LAPTOP" Pid="36960" HostCore="20" HostMemory="042558271488">
+    </Process>
+</ProcessHandle>
